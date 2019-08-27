@@ -1,0 +1,71 @@
+.balloon{
+  position: absolute;
+  top: 0;
+  padding: 15px 20px;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: 0 4px 15px -5px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  a{
+    font-size: 14px;
+    color: black;
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  h4{
+    margin-top: 30px;
+  }
+  &.hidden{
+    display: none;
+  }
+  .close{
+    float: right;
+    outline: none;
+    border:none;
+    cursor:pointer;
+    display: inline-block;
+    background: none;
+    .icon{
+      font-size: 22px;
+      content:'';
+      background:url("/images/cancel.svg") ;
+      width: 15px;
+      height: 15px;
+      display: inline-flex;
+      background-repeat:no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.balloon-info{
+  p{
+    font-size: 14px;
+  }
+  &--top{
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
+.balloon-time{
+  margin-bottom: 20px;
+  &--text{
+    font-size: 14px;
+  }
+  p{
+    margin: 7px 0;
+  }
+
+}
+.image-wrap{
+  margin: 10px 0;
+  width: 150px;
+  img{
+    display: inline-block;
+    width: 100%;
+  }
+}
