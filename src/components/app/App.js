@@ -4,7 +4,6 @@ import MapList from '../map-list';
 
 import './App.scss';
 import maps from "./map";
-import LoadScript from "../load-script";
 import Sidebar from "../sidebar";
 
 
@@ -80,18 +79,6 @@ export default class App extends Component {
             });
         };
 
-        // const onMapClick = (objId) => {
-        //     console.log(objId);
-        //     const center = searchCenter(objId);
-        //     this.setState((state) => {
-        //         if(center === this.state.center){
-        //             return { objId:objId }
-        //         }else{
-        //             return { objId:objId, center:center }
-        //         }
-        //
-        //     })
-        // }
 
         return (
             <div>

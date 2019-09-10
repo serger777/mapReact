@@ -34,7 +34,7 @@ export default class Sidebar extends Component {
             if (data[0].day) {
                 return (
                     <div className="balloon-time">
-                        <p className={"icon-tara"}>Раздача тары</p>
+                        <p><span>Раздача тары</span><span className="icon-tara"></span></p>
                         <p><span>День месяца: </span>{data[0].day}</p>
                         <p><span>Время: </span>{data[0].time}</p>
                     </div>

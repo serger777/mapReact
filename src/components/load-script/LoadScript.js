@@ -7,7 +7,7 @@ export default function LoadScript(url) {
     return new Promise(function (resolve, reject) {
 
         if (scriptsStatuses[url]) {
-            switch (scriptsStatuses[url].status) {
+            switch(scriptsStatuses[url].status) {
                 case 'loading':
                     // если скрипт уже начал загружаться, запоминаем в массиве его resolve, чтобы вызвать его позже.
                     scriptsStatuses[url].needResolving.push(resolve.bind(this));
@@ -32,7 +32,7 @@ export default function LoadScript(url) {
         s.src = url;
         s.async = true;
         s.onload = s.onreadystatechange = function () {
-            if (!r && (!this.readyState || this.readyState == "complete")) {
+            if (!r && (!this.readyState || this.readyState === "complete")) {
                 r = true;
                 // скрипт был загружен, сработал эвент, метим скрипт как complete и резолвим все промисы, которые попали в needResolving из-за статуса loading
                 scriptsStatuses[url].status = 'complete';
